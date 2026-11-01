@@ -1,0 +1,20 @@
+==================================================
+           COMANDOS OLTS ZTE (ZXA10)
+==================================================
+
+--== NAVEGACAO E CONFIGURACAO ==--
+configure terminal
+interface gpon_olt-1/9/3
+show this
+shutdown
+no shutdown
+exit
+
+--== VERIFICAR SINAL OPTICO (RX/TX ONU) ==--
+show gpon onu pon-power gpon_olt-1/9/3 1
+
+--== VERIFICAR STATUS DAS ONUS DA PORTA ==--
+show gpon onu state gpon_olt-1/9/3
+
+--== LISTAR ONUS NAO AUTORIZADAS (DESPROVISIONADAS) ==--
+show gpon onu uncfg

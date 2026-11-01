@@ -1,0 +1,21 @@
+==================================================
+           COMANDOS SWITCHS HUAWEI (VRP)
+==================================================
+
+--== VERIFICAR INTERFACES E VLANS ==--
+display interface description
+display interface description | include CNT
+display eth-trunk 8
+display vlan 105
+
+--== NEIGHBORS / VIZINHANÇAS ==--
+display lldp neighbor brief
+display lldp neighbor interface XGigabitEthernet0/0/1
+display ospf peer brief
+
+--== SINAL ÓPTICO (RX / TX) ==--
+display transceiver diagnosis interface XGigabitEthernet0/0/1
+display transceiver interface XGigabitEthernet0/0/1 verbose
+
+--== ROUTING / BGP ==--
+display bgp peer

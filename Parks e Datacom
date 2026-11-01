@@ -1,0 +1,44 @@
+==================================================
+        COMANDOS OLTS DATACOM E PARKS
+==================================================
+
+--== DATACOM (DmOS) ==--
+
+-- Mostra o status de todas as ONUs da porta GPON --
+show interface gpon 1/1/8 onu
+
+-- Mostra a potencia RX/TX especifica da ONU 1 na porta 1/1/8 --
+show interface gpon 1/1/8 onu 1 optical-power
+
+-- Lista ONUs conectadas fisicamente que ainda nao foram cadastradas --
+show interface gpon 1/1/8 unconfigured-onu
+
+-- Exibe contadores de pacotes e erros (CRC/fisica) da ONU 1 --
+show interface gpon 1/1/8 onu 1 counters
+
+-- Mostra se a porta LAN estah Up/Down e a velocidade negociada --
+show interface gpon 1/1/8 onu 1 ethernet-status
+
+-- Aplica um reset logico/reboot remoto na ONU 1 --
+request interface gpon 1/1/8 onu 1 reboot
+
+
+--== PARKS ==--
+
+-- Mostra o status de todas as ONUs da porta GPON --
+show gpon onu status gpon-port 1/1/8
+
+-- Exibe a tabela resumida com os niveis de sinal (dBm) das ONUs --
+show gpon onu optical-power gpon-port 1/1/8
+
+-- Lista ONUs conectadas fisicamente que ainda nao foram cadastradas --
+show gpon unprovisioned-onu
+
+-- Mostra estatisticas de trafego e bytes da ONU 1 --
+show gpon onu statistics 1/1/8:1
+
+-- Verifica a velocidade de negociacao e estado da porta LAN do cliente --
+show gpon onu lan-status 1/1/8:1
+
+-- Aplica um reset logico/reboot remoto na ONU 1 --
+action gpon onu 1/1/8:1 reboot
